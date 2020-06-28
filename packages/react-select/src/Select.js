@@ -1101,7 +1101,8 @@ export default class Select extends Component<Props, State> {
   // ==============================
 
   handleInputChange = (event: SyntheticKeyboardEvent<HTMLInputElement>) => {
-    const inputValue = event.currentTarget.value;
+    // @@@ COMMANDBAR UPDATE
+    const inputValue = event.target.value;
     this.inputIsHiddenAfterUpdate = false;
     this.onInputChange(inputValue, { action: 'input-change' });
     this.onMenuOpen();
